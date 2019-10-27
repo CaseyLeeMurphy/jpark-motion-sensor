@@ -5,7 +5,7 @@ import sys
 GPIO.setmode(GPIO.BCM)
 
 TRIG = 12
-ECHO = 23
+ECHO = 21
 loopcount = 0
 
 print("Distance measurment in Progress")
@@ -28,7 +28,7 @@ while True:
 		pulse_end = time.time()
 	pulse_duration = pulse_end - pulse_start
 	distance = pulse_duration*17150
-	distance = round(distance, 2)
+	distance = int(round(distance))
 	print("Measured Distance:", distance, "cm")
 	loopcount += 1
 	time.sleep(.25)

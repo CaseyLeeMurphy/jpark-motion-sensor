@@ -9,9 +9,12 @@ GPIO.setmode(GPIO.BCM)
 mixer.init()
 
 TRIG = 12
-ECHO = 23
+ECHO = 21
 SONG_PATHS = [
     "/home/pi/Documents/Cricut/jpark/jpark-motion-sensor/theme.wav",
+    "/home/pi/Documents/Cricut/jpark/jpark-motion-sensor/welcome.wav",
+    "/home/pi/Documents/Cricut/jpark/jpark-motion-sensor/welcome.wav",
+    "/home/pi/Documents/Cricut/jpark/jpark-motion-sensor/welcome.wav",
     "/home/pi/Documents/Cricut/jpark/jpark-motion-sensor/welcome.wav",
     "/home/pi/Documents/Cricut/jpark/jpark-motion-sensor/life.wav",
     "/home/pi/Documents/Cricut/jpark/jpark-motion-sensor/raptor1.wav",
@@ -55,7 +58,7 @@ def detectMotion():
                     pulse_end = time.time()
             pulse_duration = pulse_end - pulse_start
             distance = pulse_duration*17150
-            distance = round(distance, 2)
+            distance = int(round(distance))
             if distance < lowLimit or distance > highLimit:
                 motionDetected(distance)
             time.sleep(.05)
