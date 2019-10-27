@@ -31,7 +31,7 @@ def setUpSensors():
     time.sleep(2)
 
 def motionDetected(inDistance):
-    songNumber = random.randint(0, len(SONG_PATHS))
+    songNumber = random.randint(0, len(SONG_PATHS) - 1)
     print("Motion Detected! Distance:", inDistance, "cm")
     print("Starting sound")
     song = mixer.Sound(SONG_PATHS[songNumber])
