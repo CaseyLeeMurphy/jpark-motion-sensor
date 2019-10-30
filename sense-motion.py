@@ -20,7 +20,9 @@ SONG_PATHS = [
     "/home/pi/Documents/Cricut/jpark/jpark-motion-sensor/raptor1.wav",
     "/home/pi/Documents/Cricut/jpark/jpark-motion-sensor/trex1.wav",
     "/home/pi/Documents/Cricut/jpark/jpark-motion-sensor/trex2.wav",
-    "/home/pi/Documents/Cricut/jpark/jpark-motion-sensor/trex3.wav"
+    "/home/pi/Documents/Cricut/jpark/jpark-motion-sensor/trex3.wav",
+    "/home/pi/Documents/Cricut/jpark/jpark-motion-sensor/spared-no-expense.wav",
+    "/home/pi/Documents/Cricut/jpark/jpark-motion-sensor/ladies-and-gentlemen.wav",
 ]
 
 def setUpSensors():
